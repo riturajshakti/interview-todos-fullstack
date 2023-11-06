@@ -1,0 +1,253 @@
+{
+    "info": {
+        "_postman_id": "fa91688d-f26d-411d-9456-4c1b48427a89",
+        "name": "Interview Todo App",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+        "description": ""
+    },
+    "item": [
+        {
+            "name": "Users",
+            "item": [
+                {
+                    "name": "/",
+                    "request": {
+                        "method": "POST",
+                        "url": {
+                            "raw": "{{url}}/users",
+                            "path": [
+                                "users"
+                            ],
+                            "host": [
+                                "{{url}}"
+                            ]
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            },
+                            "raw": "{\n  \"name\": \"Amit Kumar\",\n  \"email\": \"amit@gmail.com\",\n  \"password\": \"123\"\n}"
+                        }
+                    }
+                },
+                {
+                    "name": "/",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "{{url}}/users",
+                            "path": [
+                                "users"
+                            ],
+                            "host": [
+                                "{{url}}"
+                            ]
+                        },
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": [
+                                {
+                                    "key": "token",
+                                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTQ4ZGRmODBjZWFiYmM2NjBhOTU4MGQiLCJlbWFpbCI6InJhakBnbWFpbC5jb20iLCJoYXNoIjoiY2Q1M2MyNjgzZSIsImlhdCI6MTY5OTI3NDM1MH0.5sZTunYNzDroXUaBOIM_zGDN-BQQSxDx0PyyYowUGiw",
+                                    "type": "string"
+                                }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "/",
+                    "request": {
+                        "method": "PATCH",
+                        "url": {
+                            "raw": "{{url}}/users",
+                            "path": [
+                                "users"
+                            ],
+                            "host": [
+                                "{{url}}"
+                            ]
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            },
+                            "raw": "{\n  \"name\": \"Raj Kumar\",\n  \"_email\": \"raj@gmail.com\",\n  \"_password\": \"123\"\n}"
+                        },
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": [
+                                {
+                                    "key": "token",
+                                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTQ4ZGRmODBjZWFiYmM2NjBhOTU4MGQiLCJlbWFpbCI6InJhakBnbWFpbC5jb20iLCJoYXNoIjoiY2Q1M2MyNjgzZSIsImlhdCI6MTY5OTI3NDY1OSwiZXhwIjoxNjk5MzYxMDU5fQ.SFEwMVt4lnhmUH_gLHwxmA8-6KYTp_he0XTqF-TVehs",
+                                    "type": "string"
+                                }
+                            ]
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Auth",
+            "item": [
+                {
+                    "name": "/login",
+                    "request": {
+                        "method": "POST",
+                        "url": {
+                            "raw": "{{url}}/auth/login",
+                            "path": [
+                                "auth",
+                                "login"
+                            ],
+                            "host": [
+                                "{{url}}"
+                            ]
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            },
+                            "raw": "{\n  \"email\": \"raj@gmail.com\",\n  \"password\": \"123\",\n  \"remember\": true\n}"
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Todos",
+            "item": [
+                {
+                    "name": "/",
+                    "request": {
+                        "method": "POST",
+                        "url": {
+                            "raw": "{{url}}/todos",
+                            "path": [
+                                "todos"
+                            ],
+                            "host": [
+                                "{{url}}"
+                            ]
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            },
+                            "raw": "{\n  \"task\": \"do some work (by raj)\"\n}"
+                        },
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": [
+                                {
+                                    "key": "token",
+                                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTQ4ZGRmODBjZWFiYmM2NjBhOTU4MGQiLCJlbWFpbCI6InJhakBnbWFpbC5jb20iLCJoYXNoIjoiY2Q1M2MyNjgzZSIsImlhdCI6MTY5OTI3NDg1NH0.yiwYmcuqCT500cN3wyzdwlXtmJS7eNDrcM36Id6yruE",
+                                    "type": "string"
+                                }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "/",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "{{url}}/todos",
+                            "path": [
+                                "todos"
+                            ],
+                            "host": [
+                                "{{url}}"
+                            ]
+                        },
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": [
+                                {
+                                    "key": "token",
+                                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTQ4ZGRmODBjZWFiYmM2NjBhOTU4MGQiLCJlbWFpbCI6InJhakBnbWFpbC5jb20iLCJoYXNoIjoiY2Q1M2MyNjgzZSIsImlhdCI6MTY5OTI3NTA3MX0.3N-ow8J4sM-Ssjh8fCT0uFk8929oljJjk0oe8g1VUI8",
+                                    "type": "string"
+                                }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "/:id",
+                    "request": {
+                        "method": "PATCH",
+                        "url": {
+                            "raw": "{{url}}/todos/6548e0833662c89f0ddf9394",
+                            "path": [
+                                "todos",
+                                "6548e0833662c89f0ddf9394"
+                            ],
+                            "host": [
+                                "{{url}}"
+                            ]
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            },
+                            "raw": "{\n  \"task\": \"test all apis (by amit)\",\n  \"done\": false\n}"
+                        },
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": [
+                                {
+                                    "key": "token",
+                                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTQ4ZGRmODBjZWFiYmM2NjBhOTU4MGQiLCJlbWFpbCI6InJhakBnbWFpbC5jb20iLCJoYXNoIjoiY2Q1M2MyNjgzZSIsImlhdCI6MTY5OTI3NTA3MX0.3N-ow8J4sM-Ssjh8fCT0uFk8929oljJjk0oe8g1VUI8",
+                                    "type": "string"
+                                }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "/:id",
+                    "request": {
+                        "method": "DELETE",
+                        "url": {
+                            "raw": "{{url}}/todos/6548e0833662c89f0ddf9394",
+                            "path": [
+                                "todos",
+                                "6548e0833662c89f0ddf9394"
+                            ],
+                            "host": [
+                                "{{url}}"
+                            ]
+                        },
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": [
+                                {
+                                    "key": "token",
+                                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTQ4ZGRmODBjZWFiYmM2NjBhOTU4MGQiLCJlbWFpbCI6InJhakBnbWFpbC5jb20iLCJoYXNoIjoiY2Q1M2MyNjgzZSIsImlhdCI6MTY5OTI3NTA3MX0.3N-ow8J4sM-Ssjh8fCT0uFk8929oljJjk0oe8g1VUI8",
+                                    "type": "string"
+                                }
+                            ]
+                        }
+                    }
+                }
+            ]
+        }
+    ]
+}
